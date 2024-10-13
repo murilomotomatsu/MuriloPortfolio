@@ -4,7 +4,7 @@ import perfil from '../assets/images/perfil.png';
 import WhatsLogo from '../assets/images/vectorWhats.svg';
 import './NavBar.css';
 
-const NavBar = ({ scrollToSection }) => {
+const NavBar = ({ scrollToSection, toggleLanguage, currentLanguage }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleWhatsappClick = () => {
@@ -27,10 +27,15 @@ const NavBar = ({ scrollToSection }) => {
     <div>
       {/* Toggle button for smaller screens */}
       <button className={`toggleButton ${isVisible ? 'open' : ''}`} onClick={toggleNavBar}>
-        {!isVisible && (  /* Conditionally render profile image if navbar is closed */
+        {!isVisible && (
           <img src={perfil} alt="Perfil" className="toggleProfileIcon" />
         )}
-        {isVisible && '-'} {/* Show 'X' icon when the navbar is open */}
+        {isVisible && '-'}
+      </button>
+
+      {/* Language Toggle Button (Always visible) */}
+      <button className={`languageButton ${isVisible ? 'open' : ''}`} onClick={toggleLanguage}>
+        {currentLanguage === 'pt-br' ? 'EN' : 'PT'}
       </button>
 
       {/* NavBar content */}
@@ -39,16 +44,16 @@ const NavBar = ({ scrollToSection }) => {
         <h1>Murilo Motomatsu</h1>
         <nav>
           <ul>
-            <li onClick={() => handleSectionClick('inicio')}>Início</li>
-            <li onClick={() => handleSectionClick('sobre-mim')}>Sobre mim</li>
-            <li onClick={() => handleSectionClick('o-que-faco')}>O que eu faço</li>
-            <li onClick={() => handleSectionClick('portfolio')}>Portfolio</li>
-            <li onClick={() => handleSectionClick('depoimentos')}>Depoimentos</li>
-            <li onClick={() => handleSectionClick('contato')}>Contato</li>
+            <li onClick={() => handleSectionClick('inicio')}>{currentLanguage === 'pt-br' ? 'Início' : 'Home'}</li>
+            <li onClick={() => handleSectionClick('sobre-mim')}>{currentLanguage === 'pt-br' ? 'Sobre mim' : 'About me'}</li>
+            <li onClick={() => handleSectionClick('o-que-faco')}>{currentLanguage === 'pt-br' ? 'O que eu faço' : 'What I do'}</li>
+            <li onClick={() => handleSectionClick('portfolio')}>{currentLanguage === 'pt-br' ? 'Portfólio' : 'Portfolio'}</li>
+            <li onClick={() => handleSectionClick('depoimentos')}>{currentLanguage === 'pt-br' ? 'Depoimentos' : 'Testimonials'}</li>
+            <li onClick={() => handleSectionClick('contato')}>{currentLanguage === 'pt-br' ? 'Contato' : 'Contact'}</li>
           </ul>
         </nav>
         <button className="whatsappButton" onClick={handleWhatsappClick}>
-          Me chame no WhatsApp
+          {currentLanguage === 'pt-br' ? 'Me chame no WhatsApp' : 'Contact me on WhatsApp'}
           <img src={WhatsLogo} alt="WhatsApp" className="whatsIcon" />
         </button>
       </div>

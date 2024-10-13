@@ -1,4 +1,4 @@
-/* NavBar Styles */
+
 .NavBar {
   display: flex;
   flex-direction: column;
@@ -11,13 +11,13 @@
   position: fixed;
 
   top: 0;
-  right: -270px; /* Hide initially */
+  right: -270px; 
   z-index: 20;
   transition: right 0.3s ease-in-out;
 }
 
 .NavBar.visible {
-  right: 0; /* Slide in when visible */
+  right: 0; 
   display: flex;
 
 
@@ -81,31 +81,31 @@
   border: none;
 }
 
-/* Toggle button styles */
+
 .toggleButton {
   position: fixed;
   top: 10%;
   right: 10px;
   background-color: #141414;
-  border-radius: 50%; /* Torna o botão circular */
+  border-radius: 50%;
   color: white;
   font-size: 20px;
   font-weight: 600;
-  width: 30px; /* Largura do botão */
-  height: 30px; /* Altura igual à largura para criar um círculo */
-  display: flex; /* Permite centralizar o conteúdo */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  padding: 0; /* Remove o padding extra */
+  width: 30px; 
+  height: 30px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 0; 
   cursor: pointer;
   z-index: 21;
   transition: right 0.3s ease-in-out;
 }
 
 .toggleProfileIcon {
-  width: 70px;  /* Ajuste conforme necessário */
+  width: 70px; 
   height: 70px;
-  border-radius: 50%; /* Para deixar a imagem redonda */
+  border-radius: 50%; 
 }
 
 .toggleButton.open {
@@ -113,11 +113,37 @@
 }
 
 
-/* Media Queries for responsiveness */
+
+.languageButton {
+  position: fixed;  
+  top: 15%; 
+  right: 10px;
+  background-color: #141414;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  z-index: 21;
+  transition: right 0.3s ease-in-out;
+}
+
+.languageButton.open {
+  right: 270px;
+}
+
+
+
 @media (max-width: 768px) {
   .NavBar {
     width: 30%;
-    right: -100vw; /* Hide navbar completely on smaller screens */
+    right: -100vw; 
   }
 
   .toggleProfileIcon{
@@ -137,6 +163,10 @@
   .toggleButton.open {
     right: 35%;
 
+  }
+  
+  .languageButton.open {
+    right: 35%;
   }
   
 }

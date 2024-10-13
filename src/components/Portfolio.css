@@ -81,7 +81,7 @@
 }
 
 .portfolio-container h2::before {
-  content: "PORTFÓLIO";
+  content: attr(data-background); 
   position: absolute;
   top: -125%;
   left: 50%;

@@ -1,3 +1,4 @@
+/* Estiliza o contêiner de cada depoimento */
 .reviewContainer {
   margin: 50px;
   padding: 16px;
@@ -5,21 +6,24 @@
   box-shadow: 0px 0px 8px 2px #ffffff;
   background: #f8f8f8;
   height: min(500px, auto);
-  max-width: 80%; /* Limits the width on larger screens */
+  max-width: 80%; /* Limita a largura em telas maiores */
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Alinha o texto do depoimento */
 .reviewContainer p {
   text-align: justify;
 }
 
+/* Estilo para as estrelas de avaliação */
 .stars {
   color: gold;
   font-size: 20px;
   margin-top: -25px;
 }
 
+/* Estilo para os slides do carrossel */
 .Carrossel .slick-slide {
   display: flex;
 }
@@ -27,12 +31,12 @@
 .Carrossel .slick-slide > div {
   width: 90%;
   margin: auto;
-  display: flex; /* Adiciona flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente (opcional) */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
-
+/* Estiliza o contêiner geral dos depoimentos */
 .ContainerDepoimentos {
   height: 100vh;
   padding: 50px;
@@ -41,17 +45,20 @@
   background-color: #1C1C1C;
 }
 
+/* Estilo para o título principal */
 .ContainerDepoimentos h2 {
   font-size: 2.5rem;
   color: #ffffff;
   position: relative;
   z-index: 1;
-  margin-bottom: 20%;
+  margin-bottom: 5%;
+  margin-top: 15%;
   text-align: center;
 }
 
+/* Texto de fundo atrás do título */
 .ContainerDepoimentos h2::before {
-  content: "DEPOIMENTOS";
+  content: attr(data-background); 
   position: absolute;
   top: -125%;
   left: 50%;
@@ -63,57 +70,56 @@
   white-space: nowrap;
 }
 
-/* Responsiveness for smaller devices */
+/* Ajustes de responsividade para telas menores */
 @media (max-width: 768px) {
   .reviewContainer {
-      max-width: 90%; /* Expands container width on smaller screens */
+      max-width: 90%; /* Expande a largura do contêiner em telas menores */
       padding: 10px;
   }
 
   .ContainerDepoimentos h2 {
-      font-size: 2rem; /* Adjusts the heading size */
+      font-size: 2rem; /* Ajusta o tamanho do título */
       margin-bottom: 20%;
       margin-top: 50%;
   }
 
   .ContainerDepoimentos h2::before {
-      font-size: 4rem; /* Reduces the size of the background text */
+      font-size: 4rem; /* Reduz o tamanho do texto de fundo */
       top: -50%;
   }
 
   .stars {
-      font-size: 16px; /* Adjusts the size of the star ratings */
+      font-size: 16px; /* Ajusta o tamanho das estrelas */
   }
 
   .reviewContainer p {
-      font-size: 1rem; /* Smaller text for better readability */
+      font-size: 1rem; /* Tamanho de texto menor */
       line-height: 1.5;
   }
   .Carrossel .slick-slide > div {
     width: 90%;
     margin: auto;
-
   }
 }
 
 @media (max-width: 480px) {
   .reviewContainer {
-      max-width: 100%; /* Full width for very small devices */
+      max-width: 100%; /* Largura completa para dispositivos muito pequenos */
       padding: 4px;
   }
 
   .ContainerDepoimentos h2 {
-      font-size: 1.5rem; /* Adjusts heading size further */      
+      font-size: 1.5rem; /* Ajusta ainda mais o tamanho do título */      
       margin-bottom: 50%;
   }
 
   .ContainerDepoimentos h2::before {
-      font-size: 3rem; /* Smaller background text for very small screens */
+      font-size: 3rem; /* Texto de fundo menor para telas muito pequenas */
       top: -40%;
   }
 
   .stars {
-      font-size: 14px; /* Further reduction of star ratings */
+      font-size: 14px; /* Reduz o tamanho das estrelas */
   }
 
   .reviewContainer p {
@@ -124,6 +130,5 @@
   .Carrossel .slick-slide > div {
     width: 85%;
     margin: auto;
-    
   }
 }

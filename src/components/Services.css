@@ -104,7 +104,7 @@
 }
 
 .services-container h2::before {
-  content: "SERVIÇOS";
+  content: attr(data-background);
   position: absolute;
   top: -120%;
   left: 50%;
@@ -119,8 +119,8 @@
 @media (max-width: 930px) {
   .services-container h2 {
     font-size: 2rem;
-    margin-bottom: 20%;
-    margin-top: 40%;
+    margin-bottom: 10%;
+    margin-top: 30%;
   }
 
   .services-container h2::before {

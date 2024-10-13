@@ -55,9 +55,9 @@ const RainStream = props => {
   useInterval(() => {
     if (!props.height || !intervalDelay) return;
 
-    const windowHeight = window.innerHeight; // Limita ao tamanho da tela
+    const windowHeight = window.innerHeight; // Limit to the screen size
 
-    // Verifica se atingiu o limite da primeira dobra da tela
+    // Check if it has reached the fold of the first screen
     if (topPadding > windowHeight) {
       setStream([]);
       const newStream = getRandStream();
@@ -72,7 +72,7 @@ const RainStream = props => {
         getRandInRange(MIN_DELAY_BETWEEN_STREAMS, MAX_DELAY_BETWEEN_STREAMS),
       );
     } else {
-      setTopPadding(topPadding + 44); // Continua descendo até atingir a dobra
+      setTopPadding(topPadding + 44); // Continue scrolling until it reaches the fold
     }
 
     setStream(getMutatedStream);
@@ -96,51 +96,64 @@ const RainStream = props => {
     </div>
   );
 };
-const TEXTS = [
-  'Desafie o óbvio, crie o surpreendente',
-  'Questione limites, reinvente o extraordinário.',
-  'Quebre padrões, construa o inovador.',
-  'Simplifique o complexo, conquiste o impossível.',
-  'Supere expectativas, alcance o memorável.',
-  'Reimagine o desconhecido, crie o inédito.',
-  'Desconstrua a rotina, descubra o impressionante.',
-];
 
-// Função para obter um índice aleatório do array de textos
+// Texts for both languages
+const TEXTS = {
+  'pt-br': [
+    'Desafie o óbvio, crie o surpreendente',
+    'Questione limites, reinvente o extraordinário.',
+    'Quebre padrões, construa o inovador.',
+    'Simplifique o complexo, conquiste o impossível.',
+    'Supere expectativas, alcance o memorável.',
+    'Reimagine o desconhecido, crie o inédito.',
+    'Desconstrua a rotina, descubra o impressionante.',
+  ],
+  'eng': [
+    'Challenge the obvious, create the surprising.',
+    'Question limits, reinvent the extraordinary.',
+    'Break patterns, build the innovative.',
+    'Simplify the complex, achieve the impossible.',
+    'Exceed expectations, reach the memorable.',
+    'Reimagine the unknown, create the unprecedented.',
+    'Deconstruct routine, discover the impressive.',
+  ],
+};
+
+// Function to get a random index of the text array
 const getRandomIndex = (length) => Math.floor(Math.random() * length);
 
-const CentralText = () => {
-  const [displayedText, setDisplayedText] = useState(''); 
-  const [textIndex, setTextIndex] = useState(getRandomIndex(TEXTS.length)); // Começa com uma frase aleatória
-  const [isDeleting, setIsDeleting] = useState(false); 
-  const [charIndex, setCharIndex] = useState(0); // Índice do caractere na frase
+const CentralText = ({ language }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [textIndex, setTextIndex] = useState(getRandomIndex(TEXTS[language].length)); // Start with a random phrase
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [charIndex, setCharIndex] = useState(0); // Index of the character in the phrase
   const [intervalDelay, setIntervalDelay] = useState(60);
 
   useInterval(() => {
-    const currentText = TEXTS[textIndex];
+    const currentText = TEXTS[language][textIndex];
 
     if (!isDeleting && charIndex < currentText.length) {
-      // Mostrar mais um caractere
+      // Show one more character
       setDisplayedText((prev) => prev + currentText[charIndex]);
       setCharIndex((prev) => prev + 1);
     } else if (isDeleting && charIndex > 0) {
-      // Apagar um caractere
+      // Delete one character
       setDisplayedText((prev) => prev.slice(0, -1));
       setCharIndex((prev) => prev - 1);
     } else if (!isDeleting && charIndex === currentText.length) {
-      // Quando o texto estiver completamente exibido, esperar um pouco e começar a apagar
+      // When the text is fully displayed, wait a little and start deleting
       setTimeout(() => setIsDeleting(true), 3000);
     } else if (isDeleting && charIndex === 0) {
-      // Quando o texto estiver completamente apagado, passar para o próximo texto
+      // When the text is fully deleted, go to the next text
       setIsDeleting(false);
-      setTextIndex((prev) => (prev + 1) % TEXTS.length); // Loop infinito pelas frases
+      setTextIndex((prev) => (prev + 1) % TEXTS[language].length); // Infinite loop through the phrases
     }
 
-    // Ajustar o intervalo de acordo com a ação
+    // Adjust the interval according to the action
     setIntervalDelay(isDeleting ? 30 : 60);
   }, intervalDelay);
 
-  // Substituir quebras de linha por <br />
+  // Replace line breaks with <br />
   const formattedText = displayedText.replace(/\n/g, '<br />');
 
   return (
@@ -151,8 +164,6 @@ const CentralText = () => {
   );
 };
 
-
-
 const getNextSection = (currentSection) => {
   const sections = ['inicio', 'sobre-mim', 'o-que-faco', 'portfolio', 'depoimentos', 'contato'];
   const currentIndex = sections.indexOf(currentSection);
@@ -161,7 +172,7 @@ const getNextSection = (currentSection) => {
 
 const isLastSection = (currentSection) => currentSection === 'contato';
 
-const Inicio = ({ scrollToSection }) => {
+const Inicio = ({ scrollToSection, language }) => {
   const containerRef = useRef(null);
   const [containerSize, setContainerSize] = useState(null);
   const [currentSection, setCurrentSection] = useState('inicio');
@@ -196,7 +207,7 @@ const Inicio = ({ scrollToSection }) => {
           <RainStream key={index} height={containerSize?.height} />
         ))}
         <div className="central-text-container">
-          <CentralText />
+          <CentralText language={language} />
         </div>
         <img
           src={ChevronDown}
