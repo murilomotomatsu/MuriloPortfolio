@@ -1,0 +1,104 @@
+
+.sobre-mim-content {
+  text-align: center;
+  padding: 20px;
+  background-color: #363636;
+  animation: slideInDown 800ms linear;
+
+  height: 100vh;
+}
+
+.sobre-mim-content h1 {
+  margin-top: 13%;
+  font-size: 2.5rem;
+  margin-bottom: 5%;
+  color: #ffffff;
+  position: relative; 
+  z-index: 1;
+
+}
+
+.sobre-mim-content h1::before {
+  content: "SOBRE MIM";
+  letter-spacing: 0.3rem;
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap; 
+}
+
+.sobre-mim-content p {
+  max-width: 50%;
+  text-align: justify; 
+  font-size: 1.2em;
+  letter-spacing: 0.1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 1650px) {
+  .sobre-mim-content h1 {
+    font-size: 2rem; /* Diminui o tamanho da fonte em telas menores */
+    margin-bottom: 5%;
+    margin-top: 10%;
+    max-height: 90vh;
+    
+  }
+
+  .sobre-mim-content h1::before {
+    font-size: 5rem; /* Reduz o tamanho do "SOBRE MIM" em telas pequenas */
+    top: -80%;
+  }
+
+  .sobre-mim-content p {
+    max-width: 50%; /* Expande o texto para a maioria da largura da tela */
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 930px) {
+  .sobre-mim-content h1 {
+    font-size: 2.5rem; /* Diminui o tamanho da fonte em telas menores */
+    margin-bottom: 20%;
+    margin-top: 40%;
+  }
+
+  .sobre-mim-content h1::before {
+    font-size: 5rem; /* Reduz o tamanho do "SOBRE MIM" em telas pequenas */
+    top: -50%;
+  }
+
+  .sobre-mim-content p {
+    max-width: 90%; /* Expande o texto para a maioria da largura da tela */
+    
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-mim-content h1 {
+    font-size: 1.5rem; /* Ajusta ainda mais em telas muito pequenas */
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+
+  .sobre-mim-content h1::before {
+    font-size: 3rem; /* Ajuste adicional do texto em telas menores */
+    top: -40%;
+  }
+
+  .sobre-mim-content p {
+    max-width: 100%; /* Usa 100% da largura da tela para o parágrafo */
+  }
+}

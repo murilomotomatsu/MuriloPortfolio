@@ -1,0 +1,174 @@
+.services-container {
+  padding: 20px 20px 110px 20px;
+  height: 100vh;  /* Garante que o container ocupe toda a altura da tela */
+  background-color: #1C1C1C;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Ajusta para começar do topo */
+  box-sizing: border-box;  /* Inclui padding no cálculo do height */
+  overflow: hidden;  /* Impede que o conteúdo saia do container */
+}
+
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Define duas colunas */
+  gap: 20px;
+  width: 100%;
+  min-height: 0;  /* Permite que o grid se ajuste corretamente à altura do container */
+  box-sizing: border-box;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  text-align: left;
+  min-height: 0;  /* Ajusta a altura corretamente dentro do grid */
+  box-sizing: border-box;
+  padding-right: 70px; /* Adiciona espaço para o progresso */
+  height: 100%;
+}
+
+.service-progress-fill {
+  background: linear-gradient(to right, #a8e6a3, #4caf50);
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.service-progress-text {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 100%;
+  color: black;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.service-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-right: 1px solid #ddd;
+  position: relative;
+  z-index: 1;
+}
+
+.service-details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;  /* Faz o conteúdo crescer para preencher o espaço disponível */
+  height: 100%;  /* Garante que ocupe a altura total do cartão */
+}
+
+.service-details p {
+  margin: 0 ;
+  font-size: 14px;
+  color: #555;
+}
+
+.service-details h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.services-container h2 {
+  margin-top: 13%;
+  font-size: 2.5rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.services-container h2::before {
+  content: "SERVIÇOS";
+  position: absolute;
+  top: -120%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 930px) {
+  .services-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20%;
+    margin-top: 40%;
+  }
+
+  .services-container h2::before {
+    font-size: 5rem;
+    top: -80%;
+  }
+}
+
+
+
+/* Ajustes para responsividade */
+@media (max-width: 668px) {
+  .services-grid {
+    grid-template-columns: 1fr;  /* Empilha os cartões em telas menores */
+    gap: 15px;
+  }
+
+  .services-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30%;
+  }
+
+  .services-container h2::before {
+    font-size: 5rem;
+    top: -80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20%;
+  }
+
+  .services-container h2::before {
+    font-size: 4rem;
+    top: -80%;
+  }
+
+  .service-details h3 {
+    font-size: 18px;
+    
+  }
+
+  .service-details p {
+
+    font-size: 14px;
+
+  }
+
+}

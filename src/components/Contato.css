@@ -1,0 +1,139 @@
+.contato-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh; 
+  padding: 20px;
+  background-color: #363636;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contato-info h3 {
+  margin: 0 0 5px 0;
+  color: #ffffff;
+}
+
+.contato-info p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.contato-info a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 50px;
+  height: 50px;
+}
+
+.contato-container h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+.contato-container h2::before {
+  content: "CONTATO";
+  position: absolute;
+  top: -125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.whatsappButtonCta {
+  animation: pulse 1s infinite;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #1EBE54;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  justify-content: center;
+  gap:20px;
+  margin: auto;
+  margin-top: 14px;
+}
+
+
+/* Media Queries para torná-lo responsivo */
+@media (max-width: 768px) {
+  .contato-container h2 {
+    font-size: 2rem; /* Diminui o tamanho da fonte em telas menores */
+    margin-bottom: 30%;
+  }
+
+  .contato-container h2::before {
+    font-size: 5rem; /* Reduz o tamanho do "CONTATO" */
+    top: -80%;
+  }
+
+  .contato-info p {
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+  }
+
+  .social-icons a img {
+    width: 40px;
+    height: 40px; /* Diminui o tamanho dos ícones */
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-container h2 {
+    font-size: 1.5rem; /* Ajusta ainda mais em telas pequenas */
+    margin-bottom: 50%;
+  }
+
+  .contato-container h2::before {
+    font-size: 4rem; /* Ajuste adicional em telas muito pequenas */
+    top: -70%;
+  }
+
+  .contato-info p {
+    font-size: 0.95rem; /* Ajusta o tamanho do texto */
+  }
+
+  .social-icons a img {
+    width: 50px;
+    height: 50px; 
+  }
+
+  .contato-grid {
+    gap: 10px; 
+  }
+}

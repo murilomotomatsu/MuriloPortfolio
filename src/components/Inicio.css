@@ -1,0 +1,117 @@
+.matrix-rain-container {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 1;
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 1);
+  z-index: 10;
+}
+
+
+.rain-stream {
+  height: 100vh;
+  width: 100vh;
+  font-family: 'matrixFont';
+  color: #20c20e;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  user-select: none;
+  white-space: nowrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-shadow: 0px 0px 8px rgba(32, 194, 14, 0.8);
+  font-size: 50px;
+  opacity: 0.5; 
+  filter: blur(3.5px);
+}
+
+.rain-char {
+    margin-top: -12px;
+}
+
+.rain-char.dimmed {
+    opacity: 0.1;
+}
+
+.rain-char.brightened {
+    color: #fff;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+    opacity: 1; /* Full opacity for the central text */
+}
+
+.central-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Ensures both the text and chevron are centered */
+  max-width: 70%;
+}
+
+
+.central-text {
+  letter-spacing: 0.18rem;
+  font-family: 'Montserrat';
+  font-size: 60px;
+  color: #ffffff;
+  white-space: wrap;
+  text-shadow: 0px 0px 20px rgb(255, 255, 255);
+  opacity: 1;
+
+}
+
+.chevron-icon {
+  cursor: pointer;
+  z-index: 10;
+  
+  position: fixed;
+  bottom: 15px; /* Chevron fixado a 15px do fundo */
+  left: 50%; /* Centraliza o ícone horizontalmente */
+  transform: translateX(-50%); /* Garante que o ícone esteja perfeitamente centralizado */
+
+  width: 50px;
+  height: 50px;
+
+  animation-delay: 5s;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(235deg) brightness(107%) contrast(101%);
+  transition: transform 1s ease;
+}
+
+.chevron-icon.rotate {
+  transform: translateX(46vw) rotate(180deg); /* Move para o lado e rotaciona */
+  bottom: 50px;
+  transition: transform 1s ease;
+}
+
+
+.cursor {
+    font-weight: bold;
+    animation: blink 1s step-end infinite;
+  }
+
+
+  @media (max-width: 1268px) {
+    .chevron-icon.rotate {
+      transform: translateX(30vw) rotate(180deg); /* Move para o lado e rotaciona */
+      bottom: 50px;
+      transition: transform 1s ease;
+    }
+
+    .central-text{
+
+      max-width: 100%;
+      font-size: 2.5rem;
+    }
+    
+    
+  }
+

@@ -1,0 +1,142 @@
+/* NavBar Styles */
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 250px;
+  background-color: #141414;
+  padding: 32px 8px;
+  gap: 30px;
+  position: fixed;
+
+  top: 0;
+  right: -270px; /* Hide initially */
+  z-index: 20;
+  transition: right 0.3s ease-in-out;
+}
+
+.NavBar.visible {
+  right: 0; /* Slide in when visible */
+  display: flex;
+
+
+}
+
+.NavBar h1 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: -20px;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.NavBar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  gap: 30px;
+}
+
+.NavBar li {
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.NavBar li:hover {
+  animation: pulse 1s infinite;
+}
+
+.NavBar img {
+  width: 150px;
+  border-radius: 50%;
+  border: 10px solid #3d3d3d;
+}
+
+.whatsappButton {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #1EBE54;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.whatsappButton:hover {
+  animation: pulse 0.5s infinite;
+}
+
+.whatsappButton img.whatsIcon {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+/* Toggle button styles */
+.toggleButton {
+  position: fixed;
+  top: 10%;
+  right: 10px;
+  background-color: #141414;
+  border-radius: 50%; /* Torna o botão circular */
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  width: 30px; /* Largura do botão */
+  height: 30px; /* Altura igual à largura para criar um círculo */
+  display: flex; /* Permite centralizar o conteúdo */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 0; /* Remove o padding extra */
+  cursor: pointer;
+  z-index: 21;
+  transition: right 0.3s ease-in-out;
+}
+
+.toggleProfileIcon {
+  width: 70px;  /* Ajuste conforme necessário */
+  height: 70px;
+  border-radius: 50%; /* Para deixar a imagem redonda */
+}
+
+.toggleButton.open {
+  right: 270px;
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .NavBar {
+    width: 30%;
+    right: -100vw; /* Hide navbar completely on smaller screens */
+  }
+
+  .toggleProfileIcon{
+    width: 50px;  
+    height: 50px;
+
+  }
+
+  .NavBar img {
+    width: 80%;
+  }
+
+  .NavBar.visible {
+    right: 0;
+  }
+
+  .toggleButton.open {
+    right: 35%;
+
+  }
+  
+}

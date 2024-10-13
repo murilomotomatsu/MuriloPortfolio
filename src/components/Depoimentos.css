@@ -1,0 +1,129 @@
+.reviewContainer {
+  margin: 50px;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px 2px #ffffff;
+  background: #f8f8f8;
+  height: min(500px, auto);
+  max-width: 80%; /* Limits the width on larger screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reviewContainer p {
+  text-align: justify;
+}
+
+.stars {
+  color: gold;
+  font-size: 20px;
+  margin-top: -25px;
+}
+
+.Carrossel .slick-slide {
+  display: flex;
+}
+
+.Carrossel .slick-slide > div {
+  width: 90%;
+  margin: auto;
+  display: flex; /* Adiciona flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente (opcional) */
+}
+
+
+.ContainerDepoimentos {
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1C1C1C;
+}
+
+.ContainerDepoimentos h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20%;
+  text-align: center;
+}
+
+.ContainerDepoimentos h2::before {
+  content: "DEPOIMENTOS";
+  position: absolute;
+  top: -125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Responsiveness for smaller devices */
+@media (max-width: 768px) {
+  .reviewContainer {
+      max-width: 90%; /* Expands container width on smaller screens */
+      padding: 10px;
+  }
+
+  .ContainerDepoimentos h2 {
+      font-size: 2rem; /* Adjusts the heading size */
+      margin-bottom: 20%;
+      margin-top: 50%;
+  }
+
+  .ContainerDepoimentos h2::before {
+      font-size: 4rem; /* Reduces the size of the background text */
+      top: -50%;
+  }
+
+  .stars {
+      font-size: 16px; /* Adjusts the size of the star ratings */
+  }
+
+  .reviewContainer p {
+      font-size: 1rem; /* Smaller text for better readability */
+      line-height: 1.5;
+  }
+  .Carrossel .slick-slide > div {
+    width: 90%;
+    margin: auto;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .reviewContainer {
+      max-width: 100%; /* Full width for very small devices */
+      padding: 4px;
+  }
+
+  .ContainerDepoimentos h2 {
+      font-size: 1.5rem; /* Adjusts heading size further */      
+      margin-bottom: 50%;
+  }
+
+  .ContainerDepoimentos h2::before {
+      font-size: 3rem; /* Smaller background text for very small screens */
+      top: -40%;
+  }
+
+  .stars {
+      font-size: 14px; /* Further reduction of star ratings */
+  }
+
+  .reviewContainer p {
+      font-size: 0.9rem;
+      margin: 0 auto;
+  }
+
+  .Carrossel .slick-slide > div {
+    width: 85%;
+    margin: auto;
+    
+  }
+}
