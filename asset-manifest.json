@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MuriloPortfolio/static/css/main.95b49f39.css",
-    "main.js": "/MuriloPortfolio/static/js/main.de78db97.js",
+    "main.js": "/MuriloPortfolio/static/js/main.e07f8b05.js",
     "static/media/Pxgbot.gif": "/MuriloPortfolio/static/media/Pxgbot.368828f5865e700d8d6e.gif",
     "static/media/Fabrica1.gif": "/MuriloPortfolio/static/media/Fabrica1.43b5a7a51c630c426b63.gif",
     "static/media/ChatBot.gif": "/MuriloPortfolio/static/media/ChatBot.92523aa7e4a5aa12ded5.gif",
@@ -9,7 +9,7 @@
     "static/media/Pwa.gif": "/MuriloPortfolio/static/media/Pwa.ce1280ec3c3ad2b0f087.gif",
     "static/media/perfil.png": "/MuriloPortfolio/static/media/perfil.6333c1c5f6b9dee78a45.png",
     "static/media/Oseu.gif": "/MuriloPortfolio/static/media/Oseu.778d3b8344443d695fb8.gif",
-    "static/media/CV - MURILO MOTOMATSU - DEV FULL STACK.pdf": "/MuriloPortfolio/static/media/CV - MURILO MOTOMATSU - DEV FULL STACK.460196bd8162bc9d9baa.pdf",
+    "static/media/CV - MURILO MOTOMATSU - DEV FULL STACK.pdf": "/MuriloPortfolio/static/media/CV - MURILO MOTOMATSU - DEV FULL STACK.f1354dd09392fbd1a3d3.pdf",
     "static/media/matrixFont.ttf": "/MuriloPortfolio/static/media/matrixFont.77b36b5eb15b0d99bd9a.ttf",
     "static/media/vectorCurriculum.svg": "/MuriloPortfolio/static/media/vectorCurriculum.0d73efe35ccd3c0e85eb76a57cbe9ce9.svg",
     "static/media/vectorWhats.svg": "/MuriloPortfolio/static/media/vectorWhats.7dc3f3267bee9b39fd8d08466208e48a.svg",
@@ -22,10 +22,10 @@
     "static/media/vectorLinkedin.svg": "/MuriloPortfolio/static/media/vectorLinkedin.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/vectorChevronDown.svg": "/MuriloPortfolio/static/media/vectorChevronDown.917cb487f658acf87dedee60d765b972.svg",
     "main.95b49f39.css.map": "/MuriloPortfolio/static/css/main.95b49f39.css.map",
-    "main.de78db97.js.map": "/MuriloPortfolio/static/js/main.de78db97.js.map"
+    "main.e07f8b05.js.map": "/MuriloPortfolio/static/js/main.e07f8b05.js.map"
   },
   "entrypoints": [
     "static/css/main.95b49f39.css",
-    "static/js/main.de78db97.js"
+    "static/js/main.e07f8b05.js"
   ]
 }
