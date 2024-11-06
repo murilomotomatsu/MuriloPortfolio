@@ -69,7 +69,7 @@ const Contato = ({ language }) => {
           <a href="https://www.linkedin.com/in/murilo-motomatsu-88077826a" target="_blank" rel="noopener noreferrer">
             <img src={Linkedin} alt="LinkedIn" />
           </a>
-          <a href="https://github.com/murilo-revisaprev" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/murilomotomatsu" target="_blank" rel="noopener noreferrer">
             <img src={GitHub} alt="GitHub" />
           </a>
           <a href={CV} download="CV - MURILO MOTOMATSU - DEV FULL STACK.pdf">
