@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MuriloPortfolio/static/css/main.95b49f39.css",
-    "main.js": "/MuriloPortfolio/static/js/main.1b6b05fb.js",
+    "main.js": "/MuriloPortfolio/static/js/main.a7489faf.js",
     "static/media/Pxgbot.gif": "/MuriloPortfolio/static/media/Pxgbot.368828f5865e700d8d6e.gif",
     "static/media/Fabrica1.gif": "/MuriloPortfolio/static/media/Fabrica1.43b5a7a51c630c426b63.gif",
     "static/media/ChatBot.gif": "/MuriloPortfolio/static/media/ChatBot.92523aa7e4a5aa12ded5.gif",
@@ -22,10 +22,10 @@
     "static/media/vectorLinkedin.svg": "/MuriloPortfolio/static/media/vectorLinkedin.ada11cda991129bc91b79d2c7cee1066.svg",
     "static/media/vectorChevronDown.svg": "/MuriloPortfolio/static/media/vectorChevronDown.917cb487f658acf87dedee60d765b972.svg",
     "main.95b49f39.css.map": "/MuriloPortfolio/static/css/main.95b49f39.css.map",
-    "main.1b6b05fb.js.map": "/MuriloPortfolio/static/js/main.1b6b05fb.js.map"
+    "main.a7489faf.js.map": "/MuriloPortfolio/static/js/main.a7489faf.js.map"
   },
   "entrypoints": [
     "static/css/main.95b49f39.css",
-    "static/js/main.1b6b05fb.js"
+    "static/js/main.a7489faf.js"
   ]
 }
