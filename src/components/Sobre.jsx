@@ -14,7 +14,7 @@ const TEXTS = {
     title: 'Who am I?',
     backgroundText: 'ABOUT ME', // Background text in English
     paragraphs: [
-      'My name is <span class="bold">Murilo Motomatsu</span>, I am <span class="bold">26 years old</span> and I am <span class="highlight">passionate about technology and innovation</span>. I have been improving my skills to make the <span class="highlight">user experience</span> more <span class="highlight">simple and efficient</span>. Every problem is an <span class="highlight">opportunity</span> to find <span class="highlight">a solution</span>. From the countryside of <span class="bold">São Paulo</span>, seeking the <span class="highlight">world</span>.',
+      'My name is <span class="bold">Murilo Motomatsu</span>, I am <span class="bold">28 years old</span> and I am <span class="highlight">passionate about technology and innovation</span>. I have been improving my skills to make the <span class="highlight">user experience</span> more <span class="highlight">simple and efficient</span>. Every problem is an <span class="highlight">opportunity</span> to find <span class="highlight">a solution</span>. From the countryside of <span class="bold">São Paulo</span>, seeking the <span class="highlight">world</span>.',
       'Want to know how I can help your project? Explore my portfolio and let’s <span class="highlight">turn ideas into solutions!</span>',
     ],
   },
