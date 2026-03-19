@@ -6,7 +6,7 @@ const TEXTS = {
     title: 'Quem sou eu?',
     backgroundText: 'SOBRE MIM', // Background text in Portuguese
     paragraphs: [
-      'Meu nome é <span class="bold">Murilo Motomatsu</span>, tenho <span class="bold">26 anos</span> e sou <span class="highlight">apaixonado por tecnologia e inovação</span>. Venho aprimorando minhas habilidades para tornar a <span class="highlight">experiência do usuário</span> mais <span class="highlight">simples e eficiente</span>. Cada problema é uma <span class="highlight">oportunidade</span> de encontrar <span class="highlight">uma solução</span>. Do interior de <span class="bold">São Paulo</span>, buscando o <span class="highlight">mundo</span>.',
+      'Meu nome é <span class="bold">Murilo Motomatsu</span>, tenho <span class="bold">28 anos</span> e sou <span class="highlight">apaixonado por tecnologia e inovação</span>. Venho aprimorando minhas habilidades para tornar a <span class="highlight">experiência do usuário</span> mais <span class="highlight">simples e eficiente</span>. Cada problema é uma <span class="highlight">oportunidade</span> de encontrar <span class="highlight">uma solução</span>. Do interior de <span class="bold">São Paulo</span>, buscando o <span class="highlight">mundo</span>.',
       'Quer saber como posso ajudar seu projeto? Explore meu portfólio e vamos <span class="highlight">transformar ideias em soluções!</span>',
     ],
   },
